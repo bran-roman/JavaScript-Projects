@@ -9,25 +9,26 @@ function Add_numbers_2() {
 Add_numbers_1();
 Add_numbers_2();
 
-/*Local Varible ("Y" not defined in Add_numbers_4 because Y is outside of function*/
+/*Local Varible ("Y" not originally defined in Add_numbers_4 because Y is outside of function*/
 function Add_numbers_3() {
     var Y = 20
     document.write(20 + Y + "<br>");
 }
 function Add_numbers_4() {
+    var Y = 20 /*Adding "Y" becuase it wasn't originally defined inside the function */
     document.write(Y + 100);
 }
 
 Add_numbers_3();
 Add_numbers_4();
 
-/*Console Ouput*/
+/*Console.log() Method - Error because "Y" not originally defined in Add_number_6 */
 function Add_numbers_5() {
     var X = 10;
     console.log(15 + X);
 }
 function Add_numbers_6() {
-    console.log(X + 100);
+    console.log(Y + 100);
 }
 Add_numbers_5();
 Add_numbers_6();
