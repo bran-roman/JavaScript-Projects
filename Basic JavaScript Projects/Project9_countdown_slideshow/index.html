@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./CSS/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <h1>Project 9 Countdown Slideshow Assignment</h1>
+    
+    <!--SLIDESHOW CONTAINER-->
+    <div class="slideshow-container">
+        
+        <!--FULL WIDTH IMAGES + NUMBER + CAPTION TEXT-->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="img1.jpg" style="width:100%">
+            <div class="text">Slide 1</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="img2.jpg" style="width:100%">
+            <div class="text">Slide 2</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="img3.png" style="width:100%">
+            <div class="text">Slide 3</div>
+        </div>
+
+        <!--NEXT + PREVIOUS BUTTONS-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- DOTS / CIRCLES-->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <p>How many seconds would you like to set your alarm for?</p>
+    <center> 
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Click here</button>
+        <p id="timer"></p>
+    </center>
+   
+    
+
+    <script src="./JS/main.js"></script>
+</body>
+</html>
