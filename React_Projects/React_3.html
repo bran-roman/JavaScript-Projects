@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script>
+            body {
+                opacity: 1;
+                transition: 1s opacity;
+            }
+
+            body.fade-out {
+                opacity: 0;
+                transition: none;
+            }
+
+            document.body.classList.add('fade-out');
+
+            window.addEventListener('DOMContentLoaded', () => (
+                document.body.classList.remove('fade-out');
+            ));
+
+        </script>
+    </head>
+<body>
+    <div id='JSX'></div>
+   <script type="text/babel">
+    class Greeting extends React.Component {
+        render() {
+            return <h1>Hello, World!</h1>
+        }
+    }
+
+    ReactDOM.render(<Greeting />, document.getElementById('JSX'))
+   </script>
+    <h1> VW Unit Challenge</h1>
+        <h3 style="font-size:10vw;">Responsive Text</h3>
+        <p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+        <p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vv will set the size to 10% of the viewport width.</p>
+        <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+   <h1> Fade Challenge</h1>
+
+</body>
+</html>
